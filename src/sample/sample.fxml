@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Rectangle?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <AnchorPane prefHeight="650.0" prefWidth="850.0">
+         <children>
+            <Canvas fx:id="canvas1" height="200.0" layoutX="14.0" layoutY="14.0" width="300.0" />
+            <Button fx:id="handleRunBtnAction" layoutX="30.0" layoutY="581.0" mnemonicParsing="false" onAction="#handleRunBtnAction" prefHeight="55.0" prefWidth="143.0" text="Start" />
+            <ProgressBar fx:id="progressBar" layoutX="30.0" layoutY="549.0" prefHeight="20.0" prefWidth="600.0" progress="0.0" />
+            <TextField fx:id="howMany" layoutX="189.0" layoutY="581.0" onAction="#onEnter" prefHeight="27.0" prefWidth="285.0" promptText="How many points do you want to generate?" />
+            <Button fx:id="handleStopBtnAction" layoutX="489.0" layoutY="581.0" mnemonicParsing="false" onAction="#handleStopBtnAction" prefHeight="55.0" prefWidth="63.0" text="Stop" />
+            <Label fx:id="results" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="312.0" layoutY="617.0" prefHeight="17.0" prefWidth="162.0" textAlignment="RIGHT" />
+            <Label layoutX="189.0" layoutY="617.0" text="Control result:" />
+            <Button fx:id="handleClearBtnAction" layoutX="567.0" layoutY="581.0" mnemonicParsing="false" onAction="#handleClearBtnAction" prefHeight="55.0" prefWidth="63.0" text="Clear" />
+            <Canvas fx:id="canvas2" height="200.0" layoutX="346.0" layoutY="14.0" width="300.0" />
+            <Canvas fx:id="canvas3" height="200.0" layoutX="14.0" layoutY="274.0" width="300.0" />
+            <Canvas fx:id="canvas4" height="200.0" layoutX="346.0" layoutY="274.0" width="300.0" />
+            <Label fx:id="results1" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="145.0" layoutY="247.0" prefHeight="17.0" prefWidth="162.0" textAlignment="RIGHT" />
+            <Label layoutX="22.0" layoutY="247.0" text="Integral result:" />
+            <Label alignment="CENTER" layoutX="22.0" layoutY="224.0" prefHeight="17.0" prefWidth="285.0" text="1.     random.nextDouble()" />
+            <Label fx:id="results2" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="477.0" layoutY="247.0" prefHeight="17.0" prefWidth="162.0" textAlignment="RIGHT" />
+            <Label layoutX="354.0" layoutY="247.0" text="Integral result:" />
+            <Label alignment="CENTER" layoutX="354.0" layoutY="224.0" prefHeight="17.0" prefWidth="285.0" text="2.    Math.random()" />
+            <Label fx:id="results3" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="145.0" layoutY="514.0" prefHeight="17.0" prefWidth="162.0" textAlignment="RIGHT" />
+            <Label layoutX="22.0" layoutY="514.0" text="Integral result:" />
+            <Label alignment="CENTER" layoutX="22.0" layoutY="491.0" prefHeight="17.0" prefWidth="285.0" text="3. random.nextDouble() divided in 4 areas" />
+            <Label fx:id="results4" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="477.0" layoutY="514.0" prefHeight="17.0" prefWidth="162.0" textAlignment="RIGHT" />
+            <Label layoutX="354.0" layoutY="514.0" text="Integral result:" />
+            <Label alignment="CENTER" layoutX="354.0" layoutY="491.0" prefHeight="17.0" prefWidth="285.0" text="4. random.nextDouble() divided in 8 areas" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="200.0" layoutX="14.0" layoutY="14.0" stroke="BLACK" strokeType="INSIDE" width="300.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="200.0" layoutX="346.0" layoutY="14.0" stroke="BLACK" strokeType="INSIDE" width="300.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="200.0" layoutX="346.0" layoutY="274.0" stroke="BLACK" strokeType="INSIDE" width="300.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="200.0" layoutX="14.0" layoutY="274.0" stroke="BLACK" strokeType="INSIDE" width="300.0" />
+            <TextArea fx:id="history" layoutX="678.0" layoutY="35.0" prefHeight="485.0" prefWidth="158.0" />
+            <Label alignment="CENTER" layoutX="678.0" layoutY="14.0" prefHeight="17.0" prefWidth="158.0" text="History:" />
+            <Label fx:id="common_m" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="797.0" layoutY="600.0" prefHeight="17.0" prefWidth="33.0" textAlignment="RIGHT" />
+            <Label layoutX="646.0" layoutY="600.0" text="Most common method:" />
+            <Label fx:id="w1" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="753.0" layoutY="531.0" prefHeight="17.0" prefWidth="33.0" textAlignment="RIGHT" />
+            <Label layoutX="728.0" layoutY="531.0" text="(1)" />
+            <Label fx:id="w2" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="753.0" layoutY="551.0" prefHeight="17.0" prefWidth="33.0" textAlignment="RIGHT" translateY="-4.0" />
+            <Label layoutX="728.0" layoutY="551.0" text="(2)" translateY="-4.0" />
+            <Label fx:id="w3" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="753.0" layoutY="568.0" prefHeight="17.0" prefWidth="33.0" textAlignment="RIGHT" translateY="-4.0" />
+            <Label layoutX="728.0" layoutY="568.0" text="(3)" translateY="-4.0" />
+            <Label fx:id="w4" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="753.0" layoutY="586.0" prefHeight="17.0" prefWidth="33.0" textAlignment="RIGHT" translateY="-6.0" />
+            <Label layoutX="728.0" layoutY="586.0" text="(4)" translateY="-6.0" />
+            <Label fx:id="runs" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="726.0" layoutY="617.0" prefHeight="17.0" prefWidth="104.0" textAlignment="RIGHT" />
+            <Label layoutX="645.0" layoutY="617.0" text="Total runs:" />
+         </children>
+      </AnchorPane>
+   </children>
+</GridPane>
